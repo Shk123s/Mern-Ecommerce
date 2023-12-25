@@ -1,0 +1,327 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  background-color: rgb(231, 227, 227);
+}
+/* ab shuru hoga */
+ .Footer
+ {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  color: white;
+  text-align: center;
+ }
+ .btnlogin
+ {
+  background-color: black;
+  color: white;
+  margin: 8px;
+  width:  80px;
+  border-radius:4px;
+ }
+ .userh1
+ {
+  font-size: 53px;
+  color:white;
+  color: #1a1a1a;
+ }
+ .adminheading
+ {  font-size: 23px;
+  color:white;
+  text-align: center;
+  margin-top: 20px;
+
+ }
+ .loginuser
+{
+  font-size: 3rem;
+}
+.userdatabox
+{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2rem;
+  gap: 8px;
+  color: #1a1a1a;
+}
+.deleteicon
+{
+  cursor: pointer;
+  color: rgb(236, 0, 0);
+}
+.editicon
+{
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+}
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #e1e1e1;
+
+  /* font-synthesis: none; */
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  /* display: flex; */
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    /* background-color: #ffffff; */
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+.registerdiv
+{  align-items:center;
+  text-align: center;
+  justify-content: center;
+ /* box-shadow:10px 10px 10px 10px #6a6464; */
+  display: flex;
+  width: 30%;
+  margin: auto;
+  /* height and width dena h */
+  background-color: #b8b7b7;
+  padding: 10px;
+  border-radius: 2%;
+ min-width:500px;
+ position: absolute;
+  top: 25%;
+  left: 35%;
+
+}
+.registerdiv h1
+{
+  margin-right: 5%;
+}
+.registerdiv:hover
+{
+  box-shadow:5px 5px 5px 5px #6a6464;
+  transition: ease-in-out;
+  animation-duration: 0s;
+}
+
+.register{
+  display: flex;
+  flex-direction: column ;
+  gap: 10px;
+ 
+}
+.btnreg
+{
+  background-color: #213547;
+ color: white;
+ margin-top: 20px;
+}
+.registerdiv input
+{
+  height: 2.2rem;
+  border-radius: 5px; 
+  border: 2px solid snow;
+ 
+  
+}
+label
+{
+  color: #213547;
+  font-size: 18px;
+  float: left;
+  font-weight: 650;
+  /* display: flex; */
+}
+/* .registerdiv span 
+{
+
+} */
+.adduseradmin form 
+{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #cdcdcd;
+  height:25%;
+  width: 25%;
+}
+.adduseradmin form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #cdcdcd; */
+  padding: 20px; /* Add padding or adjust as necessary */
+  position: absolute;
+  top: 35%;
+  left: 37%;
+} 
+.adduseradmin form button{
+  
+  background-color: #0e151b;
+ color: rgb(215, 215, 215);
+ margin-top: 20px;
+}
+.adduseradmin form input 
+{
+  margin-bottom: 10px;
+  height: 2.2rem;
+  border-radius: 5px; 
+  border: 2px solid snow;
+}
+/* CSS */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.admineditform {
+  width: 80%;
+  max-width: 400px; /* Adjust max-width as needed */
+  margin: auto;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 8px;
+}
+
+.admineditform form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media (max-width: 600px) {
+  .admineditform {
+    width: 90%;
+  }
+}
+.headingEdituser
+{
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.updateebutton
+{
+  color: #ffffff;
+  background-color: #0e151b;
+}
+
+/* useradminuploadproduct */
+.adduseradminproduct form 
+{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #cdcdcd;
+  height:55%;
+  width: 55%;
+}
+.adduseradminproduct form  {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #cdcdcd; */
+  padding: 20px; /* Add padding or adjust as necessary */
+  position: absolute;
+  top: 15%;
+  left: 22%;
+} 
+.adduseradminproduct form button{
+  
+  background-color: #0e151b;
+ color: rgb(215, 215, 215);
+ margin-top: 5px;
+}
+.adduseradminproduct h1{
+  align-items: center;
+  text-align: center;
+  margin:auto;
+  padding: 30px;
+  /* margin-bottom: 0px */
+}
+.adduseradminproduct form input 
+{
+  margin-bottom: 10px;
+  height: 3.2rem;
+  border-radius: 5px; 
+  border: 2px solid snow;
+  width: 50%;
+  
+}
+form  h1{
+ font-size: 40px;
+ font-weight: 800;
+ position: absolute;
+ top: 0;
+ margin-top: 2rem;
+}
+/* user product heading*/
+.headStore
+{
+  align-items: center;
+  text-align: center;
+ margin-top: auto;
+ padding: 20px;
+}
