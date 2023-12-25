@@ -322,6 +322,46 @@ form  h1{
 {
   align-items: center;
   text-align: center;
- margin-top: auto;
+ /* margin-top: auto; */
  padding: 20px;
+}
+.headStoreitem img
+{
+  /* height: 50%; */
+  width: 100%;
+  height: 20rem;
+  background-size: cover;
+  background-position: center;
+} 
+.headStoreitem h1, p
+{ align-items: center;
+  text-align: center;
+ font-family: 'Courier New', Courier, monospace;
+  color: white;
+} 
+.headStoreitem
+{
+  width: 25%;
+  height: 25% !important;
+  /* height: 50%; */
+  margin: 10px;
+  padding: 1px;
+  background-color: #2d4356;
+}
+.headStoreitem button
+{ 
+  margin: 5px;
+  padding: 5px;
+  width: 50%;
+  margin-left: 7rem;
+  background-color: #5cb2fd;
+}
+.headstoreDiv 
+{ display: flex;
+  flex-direction: row;
+   /* width: 100rem; */
+  flex-wrap: wrap;
+  justify-content: space-around;
+  
+  /* height: 100px; */
 }

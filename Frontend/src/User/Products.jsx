@@ -19,21 +19,23 @@ const Products = () => {
     Productdata();
     }, [])
     
-  return (
-    <div>
+  return (<>
       <h1 className="headStore">Back to store</h1>
+    <div className='headstoreDiv'>
       {Products.map((product)=>{
-        return <div key={product._id}>
+        return <div className="headStoreitem" key={product._id}>
+          <img src={`src/images/${product.photo}`} alt={product.title}/>
           <h1>{product.title}</h1>
           <p>{product.description}</p>
-          <p>{product.data}</p>
-          <img src={`src/images/${product.photo}`} alt={product.title}/>
+          <p>{product.date}</p>
          {/* { console.log(product.photo)} */}
+         {/* <button >Edit</button> */}
+         <button className='btn'>Buy</button>
             </div>
 
       })}
     </div>
-  )
+    </>)
 }
 
 export default Products
