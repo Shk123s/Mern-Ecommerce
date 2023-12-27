@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const {UploadFile} = require("../controllers/AdminUploadProduct");
-const {upload} = require("../controllers/AdminUploadProduct")
+const {UploadFile,ProductdeleteImageupload} = require("../controllers/AdminUploadProduct");
+const {upload,getproducts} = require("../controllers/AdminUploadProduct")
 const UploadProduct = require("../Models/AdminUploadProduct")
 const {register,login } = require("../controllers/AuthControllers");
 const { checkUser } = require("../Middlerwares/AuthMiddleware");
@@ -18,18 +18,8 @@ router.post("/register",register);
 router.post("/login",login);
 //admin upload product routes
 router.post("/uploadproduct",upload.single("photo"),UploadFile);
-router.get("/getproducts", async (req,res,next)=>{
-        try {
-         console.log("object")
-         const result = await  UploadProduct.find({},{__v:0});
-         console.log(result)
-         res.send(result);
-        } catch (error) {
-         console.log(error);
-        }
-       
-     }
-        );
+router.get("/getproducts", getproducts);
+router.delete("/delete/:id",ProductdeleteImageupload);
 module.exports = router
 
    

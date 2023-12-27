@@ -2,6 +2,9 @@ const UploadProduct = require("../Models/AdminUploadProduct");
 const UserModel = require("../Models/UserModel");
 const multer = require('multer');
 const  path = require('path'); 
+const createerror = require('http-errors');
+const mongoose = require('mongoose');
+
 
 const storage = multer.diskStorage({
   destination:function(req,file,cb)
@@ -44,4 +47,42 @@ const UploadFile = (req,res,next)=>{
   .catch((err)=>{res.status(400).json("Error:" + err)})
  
 }
-module.exports = {UploadFile,upload}
+
+const getproducts =
+  async (req,res,next)=>{
+    try {
+     console.log("object")
+     const result = await  UploadProduct.find({},{__v:0});
+     console.log(result)
+     res.send(result);
+    } catch (error) {
+     console.log(error);
+    }
+   
+ }
+
+
+const ProductdeleteImageupload =
+async (req,res,next)=>{
+    try {
+     const id = req.params.id
+      const product = await UploadProduct.deleteOne({_id:id})
+      // const Imageproduct = await UploadProduct.findByIdAndDelete(id);
+      console.log(product);
+      if(!product)
+      {
+          throw createerror(404,"Product does not exist");
+      }
+      res.send(product);
+    } catch (error) {
+     console.log(error.message);
+     if(error instanceof mongoose.CastError)
+     {
+          next(createerror(400,"Invalid product Id"));
+          return;
+     }
+     next(error);
+    }
+ }
+
+module.exports = {UploadFile,upload,ProductdeleteImageupload,getproducts}

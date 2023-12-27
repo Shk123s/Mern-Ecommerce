@@ -11,9 +11,15 @@ const Admin = () => {
         try {
             const deleteresponse =await  fetch(`http://localhost:4000/${userid}`,{
                 method:'DELETE'});
-            const final = await deleteresponse.json();
-            // console.log("hogaya delete yeh");
-            toast.error("User deleted  successfully ")
+            const final = await deleteresponse.json(); 
+            console.log(final);
+            if (deleteresponse.ok) {
+              // Filter out the deleted user from the state
+              const updatedUsers = user.filter((userData) => userData._id !== userid);
+              console.log(deleteresponse.ok);
+              toast.error("User deleted  successfully ")
+             setuser(updatedUsers);
+            }
         } catch (error) {
             console.log(error);
         }

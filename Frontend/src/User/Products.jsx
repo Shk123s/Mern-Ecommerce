@@ -30,7 +30,10 @@ const Products = () => {
           <p>{product.date}</p>
          {/* { console.log(product.photo)} */}
          {/* <button >Edit</button> */}
+         <div class="headStoreitembutton">
          <button className='btn'>Buy</button>
+  </div>
+       
             </div>
 
       })}

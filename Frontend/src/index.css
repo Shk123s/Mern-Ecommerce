@@ -350,10 +350,8 @@ form  h1{
 }
 .headStoreitem button
 { 
-  margin: 5px;
-  padding: 5px;
+
   width: 50%;
-  margin-left: 7rem;
   background-color: #5cb2fd;
 }
 .headstoreDiv 
@@ -364,4 +362,11 @@ form  h1{
   justify-content: space-around;
   
   /* height: 100px; */
+}
+.headStoreitembutton 
+{  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+  text-align: center; 
+  margin-bottom: 2px;
 }
