@@ -1,28 +1,40 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Header from '../header/Header';
 import Footer from '../footer/Footer';
 import {useCookies} from "react-cookie";
 import { Link, useNavigate   } from 'react-router-dom'
 import { ToastContainer,toast } from 'react-toastify';
 import axios from 'axios';
+import { Usercontext } from '../Context/UserContext';
 const User = () => {
     const [user,setuser]= useState([]);
+    const {setLogoutData} = useContext(Usercontext);
+    const Navigate = useNavigate();
+         const [cookies,setcookie,removiecookie] = useCookies([]); 
+       
+         
+          // setLogoutData(()=> {
+          //   removiecookie("jwt")
+          //   console.log("hogyaaa")
+          // }); // You may pass any necessary arguments here
+      
     useEffect(()=>{
 
-   const fetdata = async ()=>{
-     try {
-        const response = await fetch('http://localhost:4000');
-     const data = await response.json(); 
-    //  console.log(response);
-     setuser(data);
-     } catch (error) {
-        console.log(error);
-     }
-    }
+  
     fetdata();
     },[]);
-    const Navigate = useNavigate();
-    const [cookies,setcookie,removiecookie] = useCookies([]);
+    const fetdata = async ()=>{
+      try {
+         const response = await fetch('http://localhost:4000');
+      const data = await response.json(); 
+     //  console.log(response);
+      setuser(data);
+      } catch (error) {
+         console.log(error);
+      }
+     }
+    // const Navigate = useNavigate();
+    // const [cookies,setcookie,removiecookie] = useCookies([]);
     useEffect(()=>{
       const verifyUser  = async  ()=>{
        if (!cookies.jwt) {
@@ -38,17 +50,19 @@ const User = () => {
         }
         else
         {
-          toast(`Hi ${data.user}`,{theme:"dark"});
+          // toast(`Hi ${data.user}`,{theme:"dark"});
+          console.log("ddddd")
         }
        }
       
       } 
      return ()=>  verifyUser();
-    },[cookies,Navigate,removiecookie])
-    const Logout = ()=>{
-      removiecookie("jwt");
-      Navigate('/register');
-    } 
+    },[cookies,Navigate,removiecookie]);
+    //  setLogoutData(()=> {
+    //         removiecookie("jwt")
+    //         console.log("hogyaaa")
+    //       }); // You may pass any necessary arguments here
+   
   return (
     <>
       <Header/>
@@ -63,7 +77,7 @@ const User = () => {
           </div>
         );
       })}
-       <button type='button'onClick={Logout} >Logout</button>
+       {/* <button type='button'onClick={Logout} >Logout</button> */}
       <ToastContainer/>
     </div>
       <Footer/>
