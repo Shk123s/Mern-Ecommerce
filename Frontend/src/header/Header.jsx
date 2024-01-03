@@ -14,7 +14,7 @@ const Navigate = useNavigate();
      Navigate('/login');
      window.location.reload(false);
     
-            console.log("Logoutttt")
+           // console.log("Logoutttt")
  };
     return (
         <header className="shadow sticky z-50 top-0">

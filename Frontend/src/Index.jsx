@@ -13,6 +13,7 @@ import Register from './Login/Register.jsx'
 import UploadProduct from './Admin/Upload/UploadProduct.jsx'
 import Products from './User/Products.jsx'
 import { UserProvider, Usercontext } from './Context/UserContext.jsx'
+import Home from './Admin/Home.jsx'
 
 const Index = ()=>{
 
@@ -27,6 +28,7 @@ const Index = ()=>{
         <Route exact path="*" element={<Register/>}/>
         <Route exact path="/App" element={<App/>}/>
         <Route exact path="/admin" element={<Layout/>}/>
+        <Route exact path="/home" element={<Home/>}/>
         {/* <Route exact path="/admin" element={<Admin/>}/> */}
         <Route exact path="/User" element={<User/>}/>
         <Route exact path="/login" element={<Login/>}/>

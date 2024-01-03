@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-  background-color: rgb(231, 227, 227);
-}
 /* ab shuru hoga */
  .Footer
  {
@@ -91,7 +88,8 @@ body {
   /* display: flex; */
   place-items: center;
   min-width: 320px;
-  min-height: 100vh;
+  /* background-color: #2d4356; */
+  /* min-height: 100vh; */
 }
 
 h1 {
@@ -198,25 +196,26 @@ label
   align-items: center;
   justify-content: center;
   background-color: #cdcdcd;
-  height:25%;
-  width: 25%;
+  height: 20em;
+  width: 25em;
+  border-radius: 5px;
 }
 .adduseradmin form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+
   /* background-color: #cdcdcd; */
-  padding: 20px; /* Add padding or adjust as necessary */
-  position: absolute;
-  top: 35%;
-  left: 37%;
+
+ margin: 10rem auto;
+ 
+  /* Add padding or adjust as necessary */
+
 } 
 .adduseradmin form button{
   
   background-color: #0e151b;
  color: rgb(215, 215, 215);
- margin-top: 20px;
+ /* margin-top: 20px; */
 }
 .adduseradmin form input 
 {
@@ -351,7 +350,7 @@ form  h1{
 .headStoreitem button
 { 
 
-  width: 50%;
+  /* width: 30%; */
   background-color: #5cb2fd;
 }
 .headstoreDiv 
@@ -370,3 +369,11 @@ form  h1{
   text-align: center; 
   margin-bottom: 2px;
 }
+.deleteiconadminproductimage
+{
+  
+  float: right;
+ margin-right: 3rem;
+ background-color: rgb(219, 79, 79) !important;
+}
+
