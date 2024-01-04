@@ -16,7 +16,7 @@ const Admin = () => {
             if (deleteresponse.ok) {
               // Filter out the deleted user from the state
               const updatedUsers = user.filter((userData) => userData._id !== userid);
-              console.log(deleteresponse.ok);
+              // console.log(deleteresponse.ok);
               toast.error("User deleted  successfully ")
              setuser(updatedUsers);
             }

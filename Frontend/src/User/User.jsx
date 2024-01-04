@@ -50,7 +50,7 @@ const User = () => {
         }
         else
         {
-          // toast(`Hi ${data.user}`,{theme:"dark"});
+          toast(`Hi ${data.user}`,{theme:"dark"});
           console.log("ddddd")
         }
        }
