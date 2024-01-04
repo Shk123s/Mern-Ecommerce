@@ -1,19 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useCookies } from 'react-cookie';
 import { Link, NavLink } from 'react-router-dom'
-import { useNavigate } from 'react-router-dom/dist/umd/react-router-dom.development';
-
+import { Usercontext } from "../../Context/UserContext";
 const HeaderAdmin = () => {
-    //    console.log(logoutData) ;
-    const [cookies,setcookie,removiecookie] = useCookies([]);  
-    const Navigate = useNavigate();
-     function  setLogoutData( ){
-         removiecookie("jwt");
-         Navigate('/login');
-         window.location.reload(false);
-        
-                console.log("Logoutttt")
-     };
+    const {setLogoutData} = useContext(Usercontext);
+    
   return (
     <header className="shadow sticky z-50 top-0">
     <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5">
